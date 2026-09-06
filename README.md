@@ -1,27 +1,91 @@
 # UXcelerate!
 
-Welcome! Follow the steps below to participate and submit your entry.
+Rescue Robots Management Interface
 
-## How to Participate
+An interactive disaster response command center interface to control rescue robots during an earthquake for a search and rescue operation. 
+The interface provides the operators with a live map showing locations of the robots, hazards that have been found, survivors that have
+been located, a right panel that shows detailed information about survivors and allows for further planning decisions made by the robots
+in case of uncharted/inaccessible routes, the left panel that shows the robot fleet and allows for direct management of all robots also
+showing the signal strengths of each robot, where it has been deployed and to what task and last but not least features live activity feed
+to review various completed or ongoing tasks and actions performed by the operator.
 
-1. **Fork this repository**
-   Click the **Fork** button at the top right of this repo to create your own copy under your GitHub account.
+## Tech Stack
 
-2. **Build your submission**
-   Work entirely within your forked repository. Design and build your UI/UX submission according to the challenge brief. Commit your work as you go so we can see your process.
+1. TypeScript
 
-3. **Deploy your project (optional)**
-   If you'd like, deploy your project (e.g. Vercel, Netlify, GitHub Pages) and add the live link to your repo's README or description. This isn't mandatory, but it's a great way to showcase your work.
+2. HTML
 
-4. **Submit your forked repo**
-   Once you're done, copy the link to your forked repository and submit it via the official submission form:
+3. CSS
 
-   👉 **[[UXcelerate]](https://docs.google.com/forms/d/e/1FAIpQLSdF-HbTXtL_Qk098nPxq8cwys_6ANyRC2fb8I2SQCcYy4XXuQ/viewform?usp=publish-editor)**
+4. Vite.js
 
-## Notes
+5. Javascript
 
-- Make sure your forked repo is public so we can review it.
-- Double-check your form submission includes the correct repo link before the deadline.
-- Reach out to the IEI team if you run into any issues.
+6. JSON
 
-Good luck, and have fun building! 🎨
+
+## Features 
+
+1. Live disaster response map
+2. Rescue robot fleet monitoring
+3. Priority alerts and hazards
+4. Survivor detection and tracking
+5. Battery and robot status monitoring
+6. Live mission activity timeline
+7. Robot communication status
+
+## How to run Locally
+
+1. Clone repository
+2. Use the command cd DisasterManagementDashboard
+3. Run npm install , install node.js first if not yet installed on the computer
+4. Use the command npm run dev in the local terminal
+5. Open the website on local host
+
+## Hosted Vercel Domain
+
+https://rescuerobotinterface.vercel.app/
+
+## Development
+
+1. Vite.js has been used so that changes made to the code can be previewed instantly live and for basic optimizations.
+2. The file structure has been divided into various reusable components in order to make more pages if necessary.
+3. typescript has been used for the logic and for the react UI components
+4. CSS describes how everything looks
+5. JSON handles the project configuration and dependencies 
+
+## Project Structure
+```
+DisasterManagementDashboard/
+│
+├── dist/
+|
+├── node_modules/             # Installed project dependencies
+|
+├── src/
+│   ├── components/           # Reusable UI components
+│   │   ├── AlertsPanel.tsx
+│   │   ├── FleetPanel.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Header.tsx
+│   │   ├── MapArea.tsx
+│   │   ├── ResizeHandle.tsx
+│   │   └── RobotDrawer.tsx
+│   ├── App.tsx               # Main application component
+│   ├── data.ts               # robot data
+│   ├── index.css             # styling
+│   ├── main.tsx              # main entry
+│   ├── types.ts              # TypeScript type definitions
+│   ├── utils.ts              # Shared utility functions
+│   └── vite-env.d.ts         # Vite/TypeScript environment definitions
+├── .gitattributes           
+├── .gitignore                # Files excluded from Git
+├── .mise.toml                # Development tool/version configuration
+├── index.html                # HTML
+├── package.json              # Dependencies and npm scripts
+├── package-lock.json         # Locked dependency versions
+├── pnpm-lock.yaml            # pnpm dependency lockfile (needed for vercel hosting here)
+├── tsconfig.json             # TypeScript configuration
+├── vite.config.ts            # Vite configuration
+└── README.md                 # Project documentation
+```

@@ -100,7 +100,6 @@ export default function MapArea({
         sticky: true,
       })
       .addTo(impactLayer.current)
-
     ;[
       impactLayer.current,
       hazardLayer.current,

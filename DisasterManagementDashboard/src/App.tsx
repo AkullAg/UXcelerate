@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+import { Analytics } from "@vercel/analytics/react"
+
 import AlertsPanel from "./components/AlertsPanel"
 
 import Footer from "./components/Footer"
@@ -108,6 +110,7 @@ export default function App() {
         onFocusSurvivor={selectSurvivor}
         height={footerHeight}
       />
+      <Analytics />
     </div>
   )
 }
